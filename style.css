@@ -1,0 +1,250 @@
+/* =========================
+   Base colors & typography
+   ========================= */
+
+body {
+  background-color: #F4F6FB;
+  color: #4A4F63;
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 0;
+}
+
+h1 {
+  color: #2F3A5F;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+h2 {
+  color: #2E9C7F;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: #536DFE;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1C2540;
+}
+
+/* =========================
+   Layout: container + sidebar
+   ========================= */
+
+.container {
+  width: 960px;
+  margin: 40px auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.sidebar {
+  flex: 0 0 280px;
+}
+
+.page-content {
+  flex: 1;
+}
+
+/* 卡片通用样式 */
+.card-white {
+  background-color: #FFFFFF;
+  padding: 32px 32px 28px 32px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+/* 只让介绍区域居中 */
+#introduction {
+  text-align: center;
+}
+
+/* =========================
+   Responsive layout
+   ========================= */
+
+@media (max-width: 960px) {
+  .container {
+    width: 100%;
+    margin: 24px auto;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .card-white {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   Images & avatar
+   ========================= */
+
+.img-circle {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+
+.btn-blue {
+  display: inline-block;
+  background-color: #536DFE;
+  color: #FFFFFF;
+  padding: 12px 22px;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 12px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-blue:hover {
+  background-color: #2E3BB7;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   Inline list (social icons & tags)
+   ========================= */
+
+.list-inline {
+  list-style: none;
+  padding-left: 0;
+  margin: 16px 0 0 0;
+}
+
+.list-inline li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+/* 社交图标 */
+.list-inline i {
+  font-size: 32px;
+  color: #D1D5E6;
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.list-inline i:hover {
+  color: #536DFE;
+  transform: translateY(-1px);
+}
+
+/* 标签小 pill */
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: #EEF2FF;
+  color: #4A4F63;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* =========================
+   Text spacing adjustments
+   ========================= */
+
+#introduction p {
+  margin-bottom: 16px;
+}
+
+/* 让项目块里最后一行更紧凑一点 */
+#projects p:last-of-type {
+  margin-bottom: 4px;
+}
+
+/* =========================
+   Table styling (Study journey)
+   ========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+thead {
+  background-color: #EEF2FF;
+}
+
+th, td {
+  padding: 10px 8px;
+  text-align: left;
+}
+
+th {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  color: #2F3A5F;
+  border-bottom: 2px solid #D3DAF5;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #FAFBFF;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+
+tbody tr:hover {
+  background-color: #F0F3FF;
+}
+
+/* =========================
+   Typeform wrapper
+   ========================= */
+
+.typeform-embed-wrapper {
+  margin-top: 16px;
+}
+
+/* 小 tweak：侧边栏两个卡片之间不要太挤 */
+#follow-me {
+  margin-top: 20px;
+}
